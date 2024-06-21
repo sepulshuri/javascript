@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha de Produção</title>
+</head>
+<body>
+    <h1>Peças do Setor de Qualidade</h1>
+    <p id="pecas"></p>
+    <script>
+
+        let opcao = prompt("Deseja cadastrar peças. \n 1 - Sim \n 2 - Não");
+        let Reprovadas = "";
+        let numReprovadas = 0;
+        let numAprovadas = 0;
+
+        while (opcao == "1") {
+            let numeroPeca = prompt("Digite o número da peça.");
+            let estadoPeca = prompt("Digite o estado da peça. \n A - Aprovada \n R - Reprovada")
+
+            if(estadoPeca == "R") {
+                Reprovadas += "Número da Peça Reprovada: " + numeroPeca + " </br> ";
+                numReprovadas++
+            }else{
+                numAprovadas++
+            }
+            opcao = prompt("Deseja cadastrar peças. \n 1 - Sim \n 2 - Não");
+         }
+         document.getElementById("pecas").innerHTML = Reprovadas + "</br> Peças Aprovadas: " + numAprovadas + "</br> Peças Reprovadas: " + numReprovadas 
+
+    </script>
+</body>
+</html>

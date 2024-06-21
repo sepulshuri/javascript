@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dados de disciplina de uma escola</h1>
+    <p>Nome: <span id="nome"></span></p>
+    <p>Descrição do conteúdo: <span id="descricao"></span> </p>
+    <p>Frequência: <span id="frequencia"></span></p>
+    <p>Nota mínima: <span id="notaminima"></span></p>
+
+    <script>
+
+            simnao = prompt('Deseja registrar uma disciplina? 1 - Sim / 2 - Não')
+
+        let nome = "" +"<br>"
+        let descricao = "" +"<br>"
+        let frequencia = "" +"<br>"
+        let notaminima = "" +"<br>"
+
+
+
+        while(simnao == "1"){
+
+        nome += prompt ("digite o nome da disciplina")+"<br>"
+        descricao += prompt('diga a descrição do conteúdo')+"<br>"
+        frequencia += prompt('digite a frequência')+"<br>"
+        notaminima += prompt('digite a nota minima')+"<br>"
+
+        simnao = prompt('Deseja registrar uma disciplina? 1 - Sim / 2 - Não')
+
+        }
+
+        document.getElementById('nome').innerHTML = nome;
+        document.getElementById('descricao').innerHTML = descricao;
+        document.getElementById('frequencia').innerHTML = frequencia;
+        document.getElementById('notaminima').innerHTML = notaminima;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>diferença entre números</h1>
+    <p>valor 1: <span id="valor1"></span></p>
+    <p>valor 2: <span id="valor2"></span></p>
+    <p>diferença: <span id="diferenca"></span></p>
+
+    <script>
+
+        let valor1;
+        let valor2;
+        let diferenca
+
+        valor1 = prompt("coloque o valor 1")
+        valor2 = prompt("coloque o valor 2")
+
+        if (valor1 > valor2) {
+        diferenca = valor1 - valor2;
+    } else {
+        diferenca = valor2 - valor1;
+    }
+
+
+    document.getElementById('valor1').innerHTML = valor1;
+    document.getElementById('valor2').innerHTML = valor2;
+    document.getElementById('diferenca').innerHTML = diferenca;
+
+    </script>
+</body>
+</html>

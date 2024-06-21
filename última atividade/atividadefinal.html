@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratação de Técnico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contratação de Técnico</h1>
+        <button onclick="iniciarContratacao()">Contratar Técnico</button>
+        <div id="resultado"></div>
+    </div>
+    <script>
+        let servicosContratados = [];
+        function iniciarContratacao() {
+            contratarServico();
+        }
+        function contratarServico() { //serve pra pessoa escolher a opção que precisa de assistência//
+            let tipoServico = prompt("Para qual problema deseja contratar? \n1 - Hardware \n2 - Software");
+            while (tipoServico !== "1" && tipoServico !== "2") {
+                tipoServico = prompt("Opção inválida. Por favor, escolha novamente: \n1 - Hardware \n2 - Software");
+            }
+            switch (tipoServico) {
+                case "1":
+                    contratarHardware(); //função que vai casar e funcionar fora do switch//
+                    break;
+                case "2":
+                    contratarSoftware();
+                    break;
+                default:
+                    break;
+            }
+        }
+        function contratarHardware() {
+            let confirmar = confirm("Deseja contratar um técnico para Hardware?");
+            if (confirmar) {
+                let preco = 100;
+                alert(`Você escolheu contratar um técnico para Hardware. O preço é R$${preco}.`);
+                let endereco = prompt("Por favor, digite o endereço:");
+                if (endereco) {
+                    servicosContratados.push({
+                        tipo: "Hardware", //serve pra casar com a exibição no final//
+                        preco: preco,
+                        endereco: endereco
+                    });
+                    exibirServicosContratados(); //funciona como um loop que casa com o final//
+                    perguntarContinuar(); //mesma coisa que a explicação acima//
+                } else {
+                    alert("Endereço não fornecido.");
+                    perguntarContinuar();
+                }
+            } 
+        }
+        function contratarSoftware() {
+            let confirmar = confirm("Deseja contratar um técnico para Software?");
+            if (confirmar) {
+                let preco = 80;
+                alert(`Você escolheu contratar um técnico para Software. O preço é R$${preco}.`);
+                let endereco = prompt("Por favor, digite o endereço onde o técnico deve ir:");
+                if (endereco) {
+                    servicosContratados.push({
+                        tipo: "Software",
+                        preco: preco,
+                        endereco: endereco
+                    });
+                    exibirServicosContratados();
+                    perguntarContinuar();
+                } else {
+                    alert("Endereço não fornecido.");
+                    perguntarContinuar();
+                }
+            } else {
+                perguntarContinuar();
+            }
+        }
+        function exibirServicosContratados() {
+            let resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = "<h2>Serviços Contratados</h2>";
+            if (servicosContratados.length === 0) {
+                resultadoDiv.innerHTML += "<p>Nenhum serviço contratado ainda.</p>";          //exibe o resultado dentro da Div//
+            } else {
+                resultadoDiv.innerHTML += "<ul>";
+                servicosContratados.forEach(servico => {
+                    resultadoDiv.innerHTML += "<li>" + servico.tipo + " - Preço: R$" + servico.preco + " - Endereço: " + servico.endereco + "</li>";
+                });
+                resultadoDiv.innerHTML += "</ul>";
+            }
+        }
+        function perguntarContinuar() {
+            let continuar = confirm("Deseja contratar outro técnico?"); //função para o looping, a função de contratar possui as mesmas funções pra casar aqui//
+            if (continuar) {
+                contratarServico();
+            } 
+        }
+    </script>
+</body>
+</html>

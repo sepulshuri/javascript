@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora - Operadores Basicos</h1>
+    <div id="resultado"></div>
+    <script>
+        let resultadoFinal = 0;
+
+        let valor1 = Number(prompt("Digite o primeiro valor"))
+        let valor2 = Number(prompt("Digite o segundo valor"))
+        let operador = prompt("Qual calculo deseja fazer? \n [so] - Soma \n [su] - Subtração \n [mu] - Multiplicação \n [di] - Divisão")
+
+        switch (operador) {
+            case "so":
+                soma(valor1,valor2);
+                operador = "Soma"
+                break;
+            case "su":
+                subtracao(valor1,valor2);
+                operador = "Subtração"
+                break;
+            case "mu":
+                multiplicacao(valor1,valor2);
+                operador = "Multiplicação"
+                break;
+            case "di":
+                multiplicacao(valor1,valor2);
+                operador = "Divisão"
+                break;
+            default:
+                alert("Escolha uma opção correta.")
+                break;
+        }
+
+        function soma(valor1,valor2) {
+            resultadoFinal = valor1 + valor2;
+        }
+
+        function subtracao(valor1,valor2) {
+            resultadoFinal = valor1 - valor2;
+        }
+
+        function multiplicacao(valor1,valor2) {
+            resultadoFinal = valor1 * valor2;
+        }
+
+        function divisao(valor1,valor2) {
+            resultadoFinal = valor1 / valor2;
+        }
+
+        document.getElementById("resultado").innerHTML = "Valor 1: " + valor1 + "</br> Valor 2: " + valor2 + "</br>Operador: " + operador + "</br>Resultado: " + resultadoFinal;
+
+
+    </script>
+</body>
+</html>

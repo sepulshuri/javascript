@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores</title>
+</head>
+<body>
+    
+    <div id="resultado"></div>
+
+    <script>
+        const nomeAlunos = [" Leonardo"," Adonis"," Raquel"," Marlene"," Júlia"," Igor"];
+
+        document.getElementById("resultado").innerHTML += nomeAlunos + "</br>"
+ 
+        nomeAlunos[1] = " João"
+
+        document.getElementById("resultado").innerHTML += nomeAlunos
+
+        let numItensArray =  nomeAlunos.length;
+
+        document.getElementById("resultado").innerHTML += "</br> Itens na array: " + numItensArray;
+
+        let mostrar = nomeAlunos[nomeAlunos.length -2];
+
+        document.getElementById("resultado").innerHTML += "</br> Mostrar nome: " + mostrar;
+
+        tagHtml = "<ul>";
+
+        for (let i = 0; i < nomeAlunos.length; i++) {
+            tagHtml += "<li>" + nomeAlunos[i] + "</li>";
+        }
+
+        tagHtml += "</ul>";
+
+        document.getElementById("resultado").innerHTML += tagHtml;
+
+    </script>
+
+</body>
+</html>

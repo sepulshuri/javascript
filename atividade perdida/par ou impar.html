@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>par ou impar</h1>
+    <p>numero: <span id="numero"></span></p>
+    <p>resultado: <span id="resultado"></span></p>
+ 
+    <script>
+
+        let numero;
+        let resultado;
+ 
+        numero = prompt("coloque o número");
+     
+        if(numero % 2 == 0){
+            resultado = "número par";
+           
+         } else {
+            resultado = "número ímpar";
+        }
+
+        document.getElementById('numero').innerHTML = numero;
+        document.getElementById('resultado').innerHTML = resultado;
+ 
+ 
+    </script>
+</body>
+</html>

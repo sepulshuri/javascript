@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1></h1>
+    <div id="resultado"></div>
+    <script>
+        let idade = 0;
+        let faseDaVida = 0;
+        let diasVida = 0;
+        let dataNascimento;
+        let nome = prompt("Digite o nome de uma pessoa");
+        let ano = Number(prompt("Digite o ano de nascimento da pessoa"));
+        let mes = prompt("Digite o mes de nascimento da pessoa");
+        let dia = prompt("Digite o dia de nascimento da pessoa");
+
+        idade = 2024 - ano;
+
+        if (idade <=12) {
+            faseDaVida = "Criança";
+            CalcularDiasDeVida();
+        }else if(idade <=18){
+            faseDaVida = "Adolescente";
+            CalcularDiasDeVida();
+        }else if(idade <= 65){
+            faseDaVida = "Adulto";
+            CalcularDiasDeVida();
+        }else{
+            faseDaVida = "Idoso";
+            CalcularDiasDeVida();
+        }
+
+        function CalcularDiasDeVida(){
+            diasVida = (idade * 365)+(mes * 30)+ dia;
+            
+        }
+
+        dataNascimento = dia + "/" + mes + "/" + ano;
+
+        document.getElementById("resultado").innerHTML = "Nome: " + nome + "</br> Data de Nascimento: "+ dataNascimento + "</br> Dias vividos: " + diasVida;
+
+    </script>
+
+
+</body>
+</html>

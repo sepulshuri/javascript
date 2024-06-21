@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>medir peso</h1>
+    <p>nome da primeira pessoa: <span id="nome"></span></p>
+    <p>peso da primeira pessoa: <span id="peso"></span></p>
+    <p>nome da segunda pessoa: <span id="nome2"></span></p>
+    <p>peso da segunda pessoa: <span id="peso2"></span></p>
+    <p>nome da terceira pessoa: <span id="nome3"></span></p>
+    <p>peso da terceira pessoa: <span id="peso3"></span></p>
+    <P>peso maior: <span id="pesomaior"></span></P>
+    <P>peso meio: <span id="pesomeio"></span></P>
+    <P>peso menor: <span id="pesomenor"></span></P>
+ 
+    <script>
+        let nome = prompt("nome da primeira pessoa")
+        let peso = Number(prompt("peso da primeira pessoa"))
+        let nome2 = prompt("nome da segunda pessoa")
+        let peso2 = Number(prompt("peso da segunda pessoa"))
+        let nome3 = prompt("nome da terceira pessoa")
+        let peso3 = Number(prompt("peso da terceira pessoa"))
+
+        let pesomenor;
+        let pesomeio;
+        let pesomaior;
+
+
+        if (peso > peso2 && peso > peso3) {
+            pesomaior = peso;
+            if (peso2 > peso3) {
+        pesomeio = peso2;
+        pesomaior = peso3;
+    } else {
+        notameio = peso3;
+        notamenor = peso2;
+     }
+    } else if (peso2 > peso && peso2 > peso3) {
+    pesomaior = peso2;
+    if (peso > peso3) {
+        pesomeio = peso;
+        pesomenor = peso3;
+    } else {
+        pesomeio = peso3;
+        pesomenor = peso;
+        }
+    } else {
+    pesomaior = peso3;
+    if (peso > peso2) {
+        pesomeio = peso;
+        pesomenor = peso2;
+    } else {
+        pesomeio = peso2;
+        pesomenor = peso;
+        }
+    }
+        
+ 
+        document.getElementById('nome').innerHTML = nome;
+        document.getElementById('nome2').innerHTML = nome2;
+        document.getElementById('nome3').innerHTML = nome3;
+        document.getElementById('peso').innerHTML = peso;
+        document.getElementById('peso2').innerHTML = peso2;
+        document.getElementById('peso3').innerHTML = peso3;
+        document.getElementById('pesomaior').innerHTML = pesomaior
+        document.getElementById('pesomeio').innerHTML = pesomeio;
+        document.getElementById('pesomenor').innerHTML = pesomenor;
+        document.getElementById('resultado').innerHTML = resultado;
+
+        </script>
+ 
+</body>
+</html>

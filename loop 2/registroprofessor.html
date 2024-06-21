@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Insira os dados do professor em questão</h1>
+    <p>Nome: <span id="nome"></span> </p>
+    <p>Endereço: <span id="endereco"></span></p>
+    <p>Cidade: <span id="cidade"></span></p>
+    <p>UF: <span id="uf"></span></p>
+    <p>CEP: <span id="cep"></span></p>
+    <p>Telefone: <span id="telefone"></span></p>
+    <p>CPF: <span id="cpf"></span></p>
+    <p>RG: <span id="rg"></span></p>
+    <p>Data de nascimento: <span id="nascimento"></span></p>
+    <p>Grau de escolaridade: <span id="escolaridade"></span></p>
+    <p>Curso em que se formou: <span id="curso"></span></p>
+
+    <script>
+
+
+            hehe = prompt("Quer registrar um professor?: 1 - Sim / 2 - Não")
+
+        let nome = ""
+        let endereco = ""
+        let cidade = ""
+        let uf = "" 
+        let cep = ""
+        let telefone = ""
+        let cpf = ""
+        let rg = ""
+        let nascimento = ""
+        let escolaridade =""
+        let curso =""
+
+
+        while (hehe == "1"){
+
+        nome += prompt("Digite o nome do professor:")+"<br>"+"<br>"
+        endereco += prompt("Digite o endereço:")+"<br>"
+        cidade += prompt("Digite a cidade:")+"<br>"
+        uf += prompt("Digite a UF:")+"<br>"
+        cep += prompt("Digite o CEP:")+"<br>"
+        telefone += prompt("Digite o telefone:")+"<br>"
+        cpf += prompt("Digite o CPF:")+"<br>"
+        rg += prompt("Digite o RG:")+"<br>"
+        nascimento += prompt("Digite a data de nascimento:")+"<br>"
+        escolaridade += prompt("Digite o grau de escolaridade:")+"<br>"
+        curso = prompt("Digite o curso de formação:")+"<br>"
+
+
+        hehe = prompt("Quer registrar um professor?: 1 - Sim / 2 - Não")
+
+        }
+
+        document.getElementById('nome').innerHTML = nome;
+        document.getElementById('endereco').innerHTML = endereco;
+        document.getElementById('cidade').innerHTML = cidade;
+        document.getElementById('uf').innerHTML = uf;
+        document.getElementById('cep').innerHTML = cep;
+        document.getElementById('telefone').innerHTML = telefone;
+        document.getElementById('cpf').innerHTML = cpf;
+        document.getElementById('rg').innerHTML = rg;
+        document.getElementById('nascimento').innerHTML = nascimento;
+        document.getElementById('escolaridade').innerHTML = escolaridade;
+        document.getElementById('curso').innerHTML = curso;
+
+    </script>
+
+
+</body>
+
+</html>

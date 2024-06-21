@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação do Aluno</title>
+</head>
+<body>
+    <h1>Avaliação do Aluno</h1>
+    <p id="notas"></p>
+
+    <script>
+
+        let opcao = prompt("Deseja ver sua avaliação? \n 1 - Sim \n 2 - Não");
+        let notafinal = ""
+        let aulas = 32
+
+        while (opcao == 1) {
+            let nome = prompt("Digite seu nome: ")
+            let nota1 = Number(prompt("Digite sua primeira nota: "))
+            let nota2 = Number(prompt("Digite sua segunda nota: "))
+            let nota3 = Number(prompt("Digite sua terceira nota: "))
+            let faltas = Number(prompt("Digite suas faltas"))
+            let media = (nota1 + nota2 + nota3) / 3
+
+            if (media >= 7) {
+                notafinal = media
+            }else
+
+            opcao = prompt("Deseja ver sua avaliação? \n 1 - Sim \n 2 - Não");
+        }
+        
+        document.getElementById("notas").innerHTML = "Nota: " + notafinal
+    </script>
+</body>
+</html>
